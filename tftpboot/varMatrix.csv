@@ -1,0 +1,4 @@
+mac,sysname,ip,mask,gateway,fan,user,passwd
+0800.278a.ff77,spine01,172.20.0.100,255.255.255.0,172.20.0.254,port-to-power,admin,admin
+0800.272c.a0a9,leaf01,172.20.0.200,255.255.255.0,172.20.0.254,port-to-power,admin,admin
+

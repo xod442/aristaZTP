@@ -1,0 +1,32 @@
+!
+hostname $sysname
+!
+aaa authorization exec default local
+!
+interface Management 1
+ ip address $ip $mask
+!
+username cvpadmin privilege 15 role network-admin secret 5 Grape123
+username $user privilege 15 role network-admin secret 5 $passwd
+username all privilege 0 nopassword
+username spines privilege 0 noasssword
+username leafs privilege 0 no password
+!
+banner motd
+'||  ||` '||'''|, '||''''|         /.\                          ||           
+ ||  ||   ||   ||  ||   .         // \\             ''          ||           
+ ||''||   ||...|'  ||'''|        //...\\    '||''|  ||  ('''' ''||''   '''|. 
+ ||  ||   ||       ||           //     \\    ||     ||   `'')   ||    .|''|| 
+.||  ||. .||      .||....|    .//       \\. .||.   .||. `...'   `|..' `|..||.
+--------------------------------------------------------------------------------
+Ready for Ansible                                                                  
+
+EOF
+!
+ip routing
+!
+ip route-static 0.0.0.0 0.0.0.0 $gateway
+!
+management api http-commands
+	cors allowed-origin all
+    no shut
