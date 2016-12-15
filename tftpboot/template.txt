@@ -6,8 +6,8 @@ aaa authorization exec default local
 interface Management 1
  ip address $ip $mask
 !
-username cvpadmin privilege 15 role network-admin secret 5 Grape123
-username $user privilege 15 role network-admin secret 5 $passwd
+username cvpadmin privilege 15 role network-admin secret Grape123
+username $user privilege 15 role network-admin secret $passwd
 username all privilege 0 nopassword
 username spines privilege 0 noasssword
 username leafs privilege 0 no password
@@ -19,7 +19,7 @@ banner motd
  ||  ||   ||       ||           //     \\    ||     ||   `'')   ||    .|''|| 
 .||  ||. .||      .||....|    .//       \\. .||.   .||. `...'   `|..' `|..||.
 --------------------------------------------------------------------------------
-Ready for Ansible                                                                  
+Ready for Ansible                                                              
 
 EOF
 !
