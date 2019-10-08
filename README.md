@@ -11,12 +11,15 @@ When the ZTP switch boot it looks for the file to download from the dhcp setting
 
 In this case boot.py is downloaded to the switch and executed.
 
-The CSV and Template are copied over and the CSV file is read 
+The CSV and Template are copied over and the CSV file is read
 
 A process loop looks through the CSV file to find a MAC address match for the swicth.
 
-The Template function is used to replace the variables in the template.txt file and 
+The Template function is used to replace the variables in the template.txt file and
 it is saved as the startup-config.
+
+Script will use the 172.2.0.10-172.20.0.250 address space for the DHCP server.
+This can be adjusted by editing the script file.
 
 The switch reboots.
 
@@ -31,6 +34,3 @@ http://techworldwookie.com/?p=205
 You can maintain the CSV file with switchdb located here:
 
 https://github.com/xod442/scriptsonly/tree/master/switchdb
-
-
-
